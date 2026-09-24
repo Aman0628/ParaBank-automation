@@ -10,4 +10,4 @@ test(" user register ", async ({ page }) => {
     await register.goto();
     await register.validateLogin();
 
-})
+});
