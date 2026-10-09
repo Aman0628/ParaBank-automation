@@ -1,18 +1,15 @@
-const { Registration } = require("../Pages/register")
-const { LoginPage } = require("../Pages/loginPage")
-const {
-    AccountServicesPage,
-    AccountsOverviewPage,
-    OpenAccountPage,
-    TransferFundsPage,
-    BillPayPage,
-    FindTransactionsPage,
-    UpdateProfilePage,
-    RequestLoanPage,
-} = require("../Pages/accountServices")
+const { Registration } = require("../Pages/register");
+const { LoginPage } = require("../Pages/loginPage");
+const { AccountServicesPage } = require("../Pages/accountServicesPage");
+const { AccountsOverviewPage } = require("../Pages/accountsOverviewPage");
+const { OpenAccountPage } = require("../Pages/openAccountPage");
+const { TransferFundsPage } = require("../Pages/transferFundsPage");
+const { BillPayPage } = require("../Pages/billPayPage");
+const { FindTransactionsPage } = require("../Pages/findTransactionsPage");
+const { UpdateProfilePage } = require("../Pages/updateProfilePage");
+const { RequestLoanPage } = require("../Pages/requestLoanPage");
 
 class POManager {
-
     constructor(page) {
         this.page = page;
 
@@ -28,10 +25,10 @@ class POManager {
         this.requestLoanPage = new RequestLoanPage(page);
     }
 
-    getmeRegistration (){
+    getmeRegistration() {
         return this.register;
     }
-    getmeLogin (){
+    getmeLogin() {
         return this.loginPage;
     }
     getAccountServicesPage() {
@@ -59,4 +56,5 @@ class POManager {
         return this.requestLoanPage;
     }
 }
-module.exports = { POManager }
+
+module.exports = { POManager };

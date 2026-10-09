@@ -11,7 +11,7 @@ class LoginPage {
     }
 
     async goto() {
-        await this.page.goto('/parabank/index.htm', { waitUntil: 'domcontentloaded' });
+        await this.page.goto('/parabank/login.htm', { waitUntil: 'domcontentloaded' });
     }
 
     async login(username, password) {
